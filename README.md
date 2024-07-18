@@ -9,4 +9,4 @@ This paper talks about ...
 ### Important Notes:
 Add figures inside the figures folder for this template to work properly.
 
-Start with manuscript and fill up other templates after finalizing manuscript before journal submission.
+Start with manuscript.tex and fill up other templates after finalizing manuscript before journal submission.
