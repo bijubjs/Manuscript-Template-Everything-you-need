@@ -1,0 +1,104 @@
+\documentclass[12pt, a4paper]{article}
+% Packages to use:
+\usepackage{afterpage}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+%\usepackage{apacite} % Didn't work
+\usepackage{authblk}
+\usepackage{amsmath}
+\usepackage[title]{appendix}
+\usepackage{amsfonts}
+\usepackage{booktabs} % For \toprule, \midrule, \botrule
+\usepackage[citestyle = apa, bibstyle=apa, maxbibnames=20]{biblatex}
+\usepackage[font=small,labelfont=bf, hypcap=false]{caption} %\caption
+\usepackage{chngcntr}
+\usepackage{comment} %large comment
+\usepackage{csquotes} % Include csquotes
+\usepackage{csvsimple} % CSV to latex
+\usepackage{diagbox}
+\usepackage{enumitem}
+\usepackage{eqnarray}
+\usepackage{float} % for customizing caption position
+\usepackage[T1]{fontenc} % Font encoding
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[none]{hyphenat} % Hyphonate
+\usepackage{lineno} % Add the lineno package
+\usepackage{listings}
+\usepackage{lipsum}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{mathrsfs}
+\usepackage{multirow}
+\usepackage{orcidlink}
+\usepackage{pdflscape}
+\usepackage[]{ragged2e}
+\usepackage{subcaption}
+\usepackage{setspace} % Customize line spacing
+\usepackage{threeparttable} %For table footnotes
+\usepackage{tabularray}
+\usepackage{titlesec} % Redefine (sub)section numbering
+
+% ---- References & citations ---
+% Your reference file:
+\addbibresource{refs.bib} % Your.bib file
+
+% Set page size and margins
+\geometry{a4paper,
+        top=1in,
+        bottom=1in,
+        left=1in,
+        right=1in,
+        marginparwidth=0.5in
+        }
+
+\onehalfspacing % 1.5 line spacing
+\titleformat{\section} % Redefine section numbering format
+{\normalfont\Large\bfseries}{\thesection.}{1em}{}
+
+% Define a new command for the fourth-level title.
+\newcommand{\subsubsubsection}[1]{%
+  \vspace{\baselineskip} % Add some space
+  \noindent\textbf{#1\\}\quad % Adjust formatting as needed
+}
+
+% Change the position of the table caption above the table
+\captionsetup[table]{position=top} % caption position for tables
+
+% Define the unnumbered list
+\makeatletter
+\newenvironment{unlist}{%
+  \begin{list}{}{%
+    \setlength{\labelwidth}{0pt}%
+    \setlength{\labelsep}{0pt}%
+    \setlength{\leftmargin}{2em}%
+    \setlength{\itemindent}{-2em}%
+    \setlength{\topsep}{\medskipamount}%
+    \setlength{\itemsep}{3pt}%
+  }%
+}{%
+  \end{list}%
+}
+\makeatother
+
+%-------------------------------------------
+% Paper Head
+%-------------------------------------------
+\title{\textbf{Title Here}}
+\author[1, 2, *]{\small FirstName MiddleName LastName \orcidlink{xxxx-xxxx-xxxx-xxxx}}
+\author[2]{\small FirstName MiddleName LastName}
+\author[3]{\small FirstName MiddleName LastName \orcidlink{xxxx-xxxx-xxxx-xxxx}}
+\affil[1]{\small{Name of the Department, Organization, City, State, Zip Code}}
+\affil[2]{\small{Name of the Department, Organization, City, State, Zip Code}}
+\affil[3]{\small{Name of the Department, Organization, City, State, Zip Code}}
+\affil[*]{Corresponding author: \href{mailto:email@mail.com}{email@mail.com}; \href{mailto:email@mail.edu}{email@mail.edu}}
+\date{}
+
+\begin{document}
+\newpage
+\section*
+{Declaration of Interests}
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper. \\
+\end{document}
