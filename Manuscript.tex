@@ -194,4 +194,25 @@ DEF & -0.71 (0.71) & 0.317 & -2.11, 0.69 \\
 
 \newpage
 \printbibliography
+
+\newpage
+%-------------------------------------------
+% Appendix
+%-------------------------------------------
+
+\renewcommand\theequation{\Alph{section}\arabic{equation}} %Redefine equation numbering format
+\counterwithin*{equation}{section} % Number equations within sections
+\renewcommand\thefigure{\Alph{section}\arabic{figure}} % Redefine equation numbering format
+\counterwithin*{figure}{section} % Number equations within sections
+\renewcommand\thetable{\Alph{section}\arabic{table}} % Redefine equation numbering format
+\counterwithin*{table}{section} % Number equations within sections
+
+\newpage
+\begin{appendices}
+
+\section*{Appendix A: }
+
+\section*{Appendix B:}
+
+\end{appendices}
 \end{document}
